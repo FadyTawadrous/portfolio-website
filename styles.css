@@ -2,6 +2,7 @@
 :root {
     --header-color: #333;
     --section-color: #f6f6f6;
+    --title-color: #10cab7;
 }
 /* End Variables */
 
@@ -24,6 +25,19 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+}
+h2 {
+    font-size: 20px;
+    color: var(--title-color);
+}
+@media (max-width: 719px) {
+    h2 {
+        font-size: 18px;
+    }
+}
+p {
+    color: var(--header-color);
+    line-height: 1.6;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -61,7 +75,6 @@ header .text h1 {
 }
 header .text h2 {
     color: white;
-    font-size: 20px;
 }
 .navbar ul {
     list-style: none;
@@ -69,7 +82,6 @@ header .text h2 {
 .navbar li {
     display: inline-block;
 }
-
 a {
     color: white;
     padding: 20px 10px;
@@ -89,9 +101,6 @@ a:hover {
     header h1 {
         font-size: 20px;
     }
-    header h2 {
-        font-size: 2.5vw;
-    }
     a {
         padding: 1px 5px;
         font-size: 12px;
@@ -99,87 +108,104 @@ a:hover {
 }
 /* End Header */
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Start About */
 #about {
-    background-color: lavender;
-    width: 100%;
     padding: 10px;
     text-align: center;
 }
+/* End About */
 
+/* Start Projects */
 #projects {
     background-color: #f6f6f6;
-    width: 100%;
     padding: 10px;
     text-align: center;
 }
-
-img {
+#projects h2 {
+    padding: 10px;
+}
+#projects .info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.project {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.project img {
     max-width: 100%;
     height: auto;
+    border-radius: 4px;
 }
+/* End Projects */
 
+/* Start Skills */
 #skills {
-    background-color: lavender;
-    width: 100%;
     padding: 10px;
     text-align: center;
 }
-
+#skills ul {
+    list-style: none;
+}
+#skills ul li {
+    display: inline-block;
+    padding: 5px;
+}
 #skills li::before {
     content: "✔ ";
     color: green;
     margin-right: 5px;
 }
+/* End Skills */
 
+/* Start Projects */
 #contact {
-    background-color: lavender;
-    width: 100%;
     padding: 10px;
     text-align: center;
+    background-color: var(--section-color);
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 50%;
     padding: 10px;
     margin: 5px 0;
+    width: 50%;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+.radio-label {
+    padding: 5px;
+}
 input[type="submit"] {
-    background-color: #333;
+    background-color: var(--header-color);
     color: white;
-    padding: 20px 30px;
+    padding: 18px 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 100%;
+    font-size: 15px;
 }
-
 input[type="submit"]:hover {
     background-color: #555;
 }
+/* End Contact */
 
+/* Start Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--header-color);
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
 }
+footer p, footer h2 {
+    color: white;
+}
+/* End Footer */
 
-p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
 
 /* Responsive Styles */
 /*
