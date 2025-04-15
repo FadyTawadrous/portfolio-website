@@ -76,33 +76,93 @@ header .text h1 {
 header .text h2 {
     color: white;
 }
-.navbar ul {
+header .links {
+    position: relative;
+}
+header .links:hover {
+    cursor: pointer;
+}
+header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+header .links .icon span {
+    background-color: white;
+}
+header .links .icon span:first-child {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 5px;
+}
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    height: 2px;
+    margin-bottom: 5px;
+    transition: width 0.3s ease-in-out;
+}
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+header .links .icon span:nth-child(3) {
+    width: 100%;
+    height: 2px;
+}
+header .links ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    min-width: 150px;
+    display: none;
+    z-index: 1;
 }
-.navbar li {
-    display: inline-block;
+/* header .links:hover ul {
+    display: block;
+} */
+header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
 }
-a {
+header .links ul li {
+    display: block;
+}
+header .links ul li a {
+    display: block;
     color: white;
     padding: 20px 10px;
-    background-color: #555;
+    background-color: var(--header-color);
     text-decoration: none;
     font-size: 15px;
     transition: background-color 0.3 ease;
 }
-a:hover {
+header .links ul li a:hover {
     background-color: #444;
+    padding-left: 25px;
+}
+header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
 }
 @media (max-width: 719px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
+    header .text h1 {
+        font-size: 16px;
     }
-    header h1 {
-        font-size: 20px;
+    header h2 {
+        font-size: 14px;
     }
-    a {
-        padding: 1px 5px;
+    header .links ul {
+        min-width: 100px;
+    }
+    header .links ul li a {
+        padding: 10px 5px;
         font-size: 12px;
     }
 }
@@ -141,6 +201,7 @@ a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+    cursor: pointer;
 }
 /* End Projects */
 
@@ -163,7 +224,7 @@ a:hover {
 }
 /* End Skills */
 
-/* Start Projects */
+/* Start Contact */
 #contact {
     padding: 10px;
     text-align: center;
@@ -205,3 +266,22 @@ footer p, footer h2 {
     color: white;
 }
 /* End Footer */
+
+/* Start Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Start Lightbox */
