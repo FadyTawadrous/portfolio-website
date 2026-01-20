@@ -2,158 +2,422 @@
 <html lang="en">
 
 <head>
-    <title>Personal Website</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio Website of Fady Tawadrous">
-    <meta name="keywords" content="Portfolio, Fady Tawadrous, Web Development, dotnet, full stack developer">
-    <meta name="author" content="Fady Tawadrous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Fady | Full Stack .NET Developer</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <!-- Header Section -->
-    <header id="home">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="navbar">
         <div class="container">
-            <div class="text">
-                <h1>Fady Tawadrous</h1>
-                <h2>.NET Full Stack Developer</h2>
-            </div>
-            <div class="links" id="links">
-                <span class="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-                <nav role="navigation" class="navbar">
-                    <ul class="nav-list" id="nav-list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- About Section -->
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hello! My name is Fady Tawadrous. This is my personal website.</p>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="info">
-                    <article class="project">
-                        <h3>Proejct Name</h3>
-                        <p>Project description here.</p>
-                        <figure>
-                            <img src="https://fakeimg.pl/300x300/ffffff/000000?text=1" alt="Project 1">
-                            <figcaption>Image Caption</figcaption>
-                        </figure>
-                    </article>
-                    <article class="project">
-                        <h3>Proejct Name</h3>
-                        <p>Project description here..</p>
-                        <figure>
-                            <img src="https://fakeimg.pl/300x300/ffffff/000000?text=2" alt="Project 2">
-                            <figcaption>Image Caption</figcaption>
-                        </figure>
-                    </article>
-                    <article class="project">
-                        <h3>Proejct Name</h3>
-                        <p>Project description here.</p>
-                        <figure>
-                            <img src="https://fakeimg.pl/300x300/ffffff/000000?text=3" alt="Project 3">
-                            <figcaption>Image Caption</figcaption>
-                        </figure>
-                    </article>
-                    <article class="project">
-                        <h3>Proejct Name</h3>
-                        <p>Project description here.</p>
-                        <figure>
-                            <img src="https://fakeimg.pl/300x300/ffffff/000000?text=4" alt="Project 4">
-                            <figcaption>Image Caption</figcaption>
-                        </figure>
-                    </article>
-                    <article class="project">
-                        <h3>Proejct Name</h3>
-                        <p>Project description here.</p>
-                        <figure>
-                            <img src="https://fakeimg.pl/300x300/ffffff/000000?text=5" alt="Project 5">
-                            <figcaption>Image Caption</figcaption>
-                        </figure>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <div class="container">
-                <h2>My Skills</h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>C#</li>
-                    <li>.NET</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
+            <a class="navbar-brand fw-bold" href="#">Fady<span class="text-primary">.dev</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Form</h2>
-                <form id="form" method="get">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    <br>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <br><br>
-
-                    <label class="radio-label">Rate this site please:</label><br>
-                    <label for="excellent">Excellent</label>
-                    <input type="radio" id="excellent" name="rating" value="excellent">
-
-                    <label for="good">Good</label>
-                    <input type="radio" id="good" name="rating" value="good" checked>
-
-                    <label for="average">Average</label>
-                    <input type="radio" id="average" name="rating" value="average">
-                    <br><br>
-
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" placeholder="Write your message here"
-                        required></textarea><br>
-
-                    <input type="submit" value="submit">
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer id="footer">
+    <section id="home" class="hero-section d-flex align-items-center">
         <div class="container">
-            <h2>Thank you for visiting</h2>
-            <p>© 2025 All Rights Reserved.</p>
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 text-center text-lg-start order-2 order-lg-1">
+                    <div class="fade-in-up">
+                        <span class="badge bg-soft-primary text-primary mb-3 rounded-pill px-3 py-2">Available for
+                            hire</span>
+                        <h1 class="display-3 fw-bold mb-3">Hi, I'm <span class="gradient-text">Fady Tawadrous</span>
+                        </h1>
+                        <h2 class="h4 text-muted mb-4">.NET Full Stack Developer</h2>
+                        <p class="lead text-muted mb-4">
+                            Motivated developer with hands-on experience building web applications using <strong>ASP.NET
+                                Core MVC/Web API</strong>, <strong>Angular</strong>,
+                            and <strong>Blazor</strong>.
+                            Turning complex backend logic into smooth frontend experiences.
+                        </p>
+                        <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                            <a href="#projects" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">View Work</a>
+                            <a href="https://github.com/FadyTawadrous" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/fady-tawadrous-65439a162/" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center order-1 order-lg-2 mb-4 mb-lg-0">
+                    <div class="hero-img-wrapper fade-in-up">
+                        <img src="profile.png" alt="Fady" class="profile-pic">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <h2 class="text-primary fw-bold ">Skills & Technologies</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Backend -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-100">
+                    <div class="skill-card p-4 h-100">
+                        <div class="icon-box bg-soft-primary text-primary mb-3">
+                            <i class="fas fa-server fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Backend</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">MVC</span>
+                            <span class="tech-tag">Web API</span>
+                            <span class="tech-tag">Blazor Server</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-200">
+                    <div class="skill-card p-4 h-100">
+                        <div class="icon-box bg-soft-success text-success mb-3">
+                            <i class="fas fa-code fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Frontend</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Blazor (WASM)</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-300">
+                    <div class="skill-card p-4 h-100">
+                        <div class="icon-box bg-soft-warning text-warning mb-3">
+                            <i class="fas fa-database fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Database</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">T-SQL</span>
+                            <span class="tech-tag">Entity Framework Core</span>
+                            <span class="tech-tag">LINQ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-100">
+                    <div class="skill-card p-4 h-100">
+                        <div class="icon-box bg-soft-info text-info mb-3">
+                            <i class="fas fa-tools fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Development Tools</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tech-tag">Visual Studio</span>
+                            <span class="tech-tag">VS Code</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">GitHub</span>
+                            <span class="tech-tag">SQL Server Management Studio (SSMS)</span>
+                            <span class="tech-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Others -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-200">
+                    <div class="skill-card p-4 h-100">
+                        <div class="icon-box bg-soft-danger text-danger mb-3">
+                            <i class="fas fa-brain fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Other Skills</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">SOLID Principles</span>
+                            <span class="tech-tag">RESTful Architecture</span>
+                            <span class="tech-tag">Layered Architecture</span>
+                            <span class="tech-tag">Problem Solving</span>
+                            <span class="tech-tag">Design Patterns</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <h2 class="text-primary fw-bold ">Featured Projects</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- E-Commerce App -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-100">
+                    <div class="project-card bg-white rounded-4 overflow-hidden h-100 shadow-sm">
+                        <div class="ratio ratio-16x9 bg-dark">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/KUVz6iifiwE?si=crlDqHOt1zU9qHJW"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">E-Commerce App</h5>
+                            <p class="text-muted small mb-3">Production-ready ITI graduation project: Full-stack
+                                shopping platform with Stripe payment processing, JWT
+                                authentication, role-based access control, AI-powered RAG chatbot, Face ID
+                                authentication and
+                                admin dashboard.</p>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border">ASP.NET Core 8.0</span>
+                                <span class="badge bg-light text-dark border">Web API</span>
+                                <span class="badge bg-light text-dark border">SQL</span>
+                                <span class="badge bg-light text-dark border">Entity Framework</span>
+                                <span class="badge bg-light text-dark border">Angular 20</span>
+                                <span class="badge bg-light text-dark border">AI RAG chatbot</span>
+                                <span class="badge bg-light text-dark border">JWT Authentication</span>
+                                <span class="badge bg-light text-dark border">Google Auth</span>
+                                <span class="badge bg-light text-dark border">Face ID</span>
+                                <span class="badge bg-light text-dark border">Stripe API</span>
+                                <span class="badge bg-light text-dark border">OpenStreetMaps</span>
+                            </div>
+                            <a href="https://github.com/FadyTawadrous/Ecom" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                Backend
+                            </a>
+                            <a href="https://github.com/FadyTawadrous/Ecom.Client" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                Frontend
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To-Do List App -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-200">
+                    <div class="project-card bg-white rounded-4 overflow-hidden h-100 shadow-sm">
+                        <div class="ratio ratio-16x9 bg-dark">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/9ai9xt8iOzA?si=Y0mlm9MX5K8SZPQA"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">To-Do List App</h5>
+                            <p class="text-muted small mb-3">
+                                Developed a real-time task management dashboard using Blazor Server and ASP.NET Core.
+                                Designed for
+                                productivity, clarity, and scalability, this app empowers users to manage tasks
+                                efficiently with robust custom
+                                authentication, responsive UI, and real-time feedback</p>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border">ASP.NET Core</span>
+                                <span class="badge bg-light text-dark border">Blazor Server</span>
+                                <span class="badge bg-light text-dark border">Entity Framework Core</span>
+                                <span class="badge bg-light text-dark border">SQL Server</span>
+                                <span class="badge bg-light text-dark border">SignalR</span>
+                                <span class="badge bg-light text-dark border">Bootstrap 5</span>
+                            </div>
+                            <a href="https://github.com/FadyTawadrous/TaskManager" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Manager -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-300">
+                    <div class="project-card bg-white rounded-4 overflow-hidden h-100 shadow-sm">
+                        <div class="ratio ratio-16x9 bg-dark">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/PLGwa9oQzPw?si=Owfnz9tQz_V_P1V_"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">Employee Manager</h5>
+                            <p class="text-muted small mb-3">A robust 3-tier ASP.NET MVC application for enterprise
+                                resource management. Featuring advanced concepts like soft delete, and dynamic
+                                localization
+                                (English/Arabic).</p>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border">ASP.NET Core 8.0</span>
+                                <span class="badge bg-light text-dark border">MVC</span>
+                                <span class="badge bg-light text-dark border">SQL</span>
+                                <span class="badge bg-light text-dark border">Entity Framework</span>
+                                <span class="badge bg-light text-dark border">Razor</span>
+                                <span class="badge bg-light text-dark border">Bootstrap 5</span>
+                            </div>
+                            <a href="https://github.com/FadyTawadrous/MVC-HR-Manager" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Game -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-100">
+                    <div class="project-card bg-white rounded-4 overflow-hidden h-100 shadow-sm">
+                        <div class="ratio ratio-16x9 bg-dark">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/78ca-iw8F54?si=9-6wOmWCaddYtYKL"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">Memory Game</h5>
+                            <p class="text-muted small mb-3">A browser-based Interactive memory card game, flip cards to
+                                find
+                                matching pairs and earn points. Featuring responsive layout
+                                and background sounds and visuals utilizing complex JavaScript
+                                logic
+                                and DOM manipulation.</p>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border">HTML5</span>
+                                <span class="badge bg-light text-dark border">CSS3</span>
+                                <span class="badge bg-light text-dark border">JavaScript</span>
+                                <span class="badge bg-light text-dark border">TypeScript</span>
+                                <span class="badge bg-light text-dark border">Bootstrap 5</span>
+                            </div>
+                            <a href="https://github.com/FadyTawadrous/memory-game" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="https://fadytawadrous.github.io/memory-game/" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fa fa-rocket"></i>
+                                Deployment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Commerce Frontend App -->
+                <div class="col-lg-4 col-md-6 fade-in-up delay-200">
+                    <div class="project-card bg-white rounded-4 overflow-hidden h-100 shadow-sm">
+                        <div class="ratio ratio-16x9 bg-dark">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/fl3murEfGBU?si=ZZRNiiDoUmAQ2v2i"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold">Angular E-Commerce Frontend</h5>
+                            <p class="text-muted small mb-3">Responsive shopping interface focusing on UX, animations,
+                                and state management.</p>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-dark border">Angular 20</span>
+                                <span class="badge bg-light text-dark border">TypeScript</span>
+                                <span class="badge bg-light text-dark border">Bootstrap 5</span>
+                            </div>
+                            <a href="https://github.com/AbdelrahmanKhalid710/E-Commerce-AngularFinalProject"
+                                target="_blank" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="https://angularproject-green.vercel.app/home" target="_blank"
+                                class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                                <i class="fa fa-rocket"></i>
+                                Deployment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5" id="contact">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h3 class="fw-bold">Let's work together</h3>
+                    <p class="text-white-50">I'm always interested in new opportunities and exciting projects. Whether
+                        you have a question or just want to say hello, feel free to reach out!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="mailto:fadytawadrous3@gmail.com" class="btn btn-outline-light rounded-pill px-4">
+                        <i class="fa fa-envelope"></i>
+                        Email Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center text-center mt-4">
+                <div class="col-md-4">
+                    <i class="fa fa-envelope"></i>&nbsp
+                    fadytawadrous3@gmail.com
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-phone"></i>&nbsp
+                    +2 01273018817
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-location-dot"></i>&nbsp
+                    Cairo, Egypt
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-white-50 small">
+                &copy; <span id="year"></span> Fady Tawadrous Ayoub. Built with Bootstrap 5 & Passion.
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
